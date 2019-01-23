@@ -16,6 +16,6 @@ struct Movie {
     let averageRating: Double
 }
 
-struct PopularMovies {
+struct PopularMovies: Decodable {
     let movies: [Movie]
 }
