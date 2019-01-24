@@ -43,6 +43,7 @@
                     </view>
                     <connections>
                         <outlet property="appLabel" destination="Hv2-aR-8RT" id="dBY-Zy-WC4"/>
+                        <outlet property="scrollView" destination="OET-5t-B0q" id="W8o-0U-sVy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

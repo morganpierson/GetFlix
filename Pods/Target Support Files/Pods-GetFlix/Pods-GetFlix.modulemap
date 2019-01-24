@@ -1,0 +1,6 @@
+framework module Pods_GetFlix {
+  umbrella header "Pods-GetFlix-umbrella.h"
+
+  export *
+  module * { export * }
+}

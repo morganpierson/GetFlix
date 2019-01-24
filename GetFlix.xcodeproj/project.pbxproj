@@ -13,11 +13,13 @@
 		AA2301CC21F7F37B00222775 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA2301CB21F7F37B00222775 /* Assets.xcassets */; };
 		AA2301CF21F7F37B00222775 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2301CD21F7F37B00222775 /* LaunchScreen.storyboard */; };
 		AA2301D721F8055B00222775 /* PopularMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2301D621F8055B00222775 /* PopularMovies.swift */; };
-		AA2301D921F807DE00222775 /* PopularMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2301D821F807DE00222775 /* PopularMovieViewModel.swift */; };
 		AA2301DB21F80AA100222775 /* MovieDBAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2301DA21F80AA100222775 /* MovieDBAPIClient.swift */; };
+		E9B7DC65084D5016F24B2B6C /* Pods_GetFlix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFDC202572C41346EA0E36F /* Pods_GetFlix.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4EFDC202572C41346EA0E36F /* Pods_GetFlix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetFlix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A59E1ECBFDAA592675F7AE86 /* Pods-GetFlix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetFlix.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetFlix/Pods-GetFlix.release.xcconfig"; sourceTree = "<group>"; };
 		AA2301C121F7F36900222775 /* GetFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2301C421F7F36900222775 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA2301C621F7F36900222775 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,8 +28,8 @@
 		AA2301CE21F7F37B00222775 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA2301D021F7F37B00222775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA2301D621F8055B00222775 /* PopularMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovies.swift; sourceTree = "<group>"; };
-		AA2301D821F807DE00222775 /* PopularMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieViewModel.swift; sourceTree = "<group>"; };
 		AA2301DA21F80AA100222775 /* MovieDBAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBAPIClient.swift; sourceTree = "<group>"; };
+		D240808DE94CA4ECB791DC25 /* Pods-GetFlix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetFlix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetFlix/Pods-GetFlix.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9B7DC65084D5016F24B2B6C /* Pods_GetFlix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EB7CCBA80CB6131A35D5957 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EFDC202572C41346EA0E36F /* Pods_GetFlix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AD3CFB6F62EE65F8C4E57A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D240808DE94CA4ECB791DC25 /* Pods-GetFlix.debug.xcconfig */,
+				A59E1ECBFDAA592675F7AE86 /* Pods-GetFlix.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AA2301B821F7F36900222775 = {
 			isa = PBXGroup;
 			children = (
 				AA2301C321F7F36900222775 /* GetFlix */,
 				AA2301C221F7F36900222775 /* Products */,
+				7AD3CFB6F62EE65F8C4E57A5 /* Pods */,
+				4EB7CCBA80CB6131A35D5957 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,7 +89,6 @@
 				AA2301CD21F7F37B00222775 /* LaunchScreen.storyboard */,
 				AA2301D021F7F37B00222775 /* Info.plist */,
 				AA2301D621F8055B00222775 /* PopularMovies.swift */,
-				AA2301D821F807DE00222775 /* PopularMovieViewModel.swift */,
 				AA2301DA21F80AA100222775 /* MovieDBAPIClient.swift */,
 			);
 			path = GetFlix;
@@ -80,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA2301D321F7F37B00222775 /* Build configuration list for PBXNativeTarget "GetFlix" */;
 			buildPhases = (
+				8F1D480BF7F61C47C7CBEBB5 /* [CP] Check Pods Manifest.lock */,
 				AA2301BD21F7F36900222775 /* Sources */,
 				AA2301BE21F7F36900222775 /* Frameworks */,
 				AA2301BF21F7F36900222775 /* Resources */,
+				D53F5EB3E6B49260EDDCA5C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,6 +162,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8F1D480BF7F61C47C7CBEBB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GetFlix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D53F5EB3E6B49260EDDCA5C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GetFlix/Pods-GetFlix-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetFlix/Pods-GetFlix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AA2301BD21F7F36900222775 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -146,7 +208,6 @@
 			files = (
 				AA2301DB21F80AA100222775 /* MovieDBAPIClient.swift in Sources */,
 				AA2301C721F7F36900222775 /* ViewController.swift in Sources */,
-				AA2301D921F807DE00222775 /* PopularMovieViewModel.swift in Sources */,
 				AA2301C521F7F36900222775 /* AppDelegate.swift in Sources */,
 				AA2301D721F8055B00222775 /* PopularMovies.swift in Sources */,
 			);
@@ -290,6 +351,7 @@
 		};
 		AA2301D421F7F37B00222775 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D240808DE94CA4ECB791DC25 /* Pods-GetFlix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +370,7 @@
 		};
 		AA2301D521F7F37B00222775 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A59E1ECBFDAA592675F7AE86 /* Pods-GetFlix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

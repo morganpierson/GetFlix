@@ -16,7 +16,8 @@ class MovieDBAPIClient {
     lazy var baseURL: URL = {
         return URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=\(self.API_KEY)&language=en-US&page=1")!
     }()
-    
+    let posterURL = "https://image.tmdb.org/t/p/w500"
+
     //create constant that will handle JSON decoding functionality
     let decoder = JSONDecoder()
     
@@ -53,20 +54,16 @@ class MovieDBAPIClient {
                         completion(nil, error)
                         return
                     }
-                    print("DATA: ", data)
                     if httpResponse.statusCode == 200 {
                         do {
                             //save successfully decoded movie data with type we want to use as model reference for data
                             let movie = try self.decoder.decode(PopularMovies.self, from: data)
-                            print("movie: ", movie)
                             //call completion handler with successful movie data
                             completion(movie, nil)
                         } catch {
-                            print("ERROR DECODING: ", error)
                             completion(nil, error)
                         }
                     } else {
-                        print("ERROR: ", httpResponse.statusCode)
                         completion(nil, error)
                     }
                 }
