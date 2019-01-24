@@ -9,13 +9,14 @@
 import Foundation
 import UIKit
 
-struct Movie {
-    let title: String
-    let overview: String
-    let moviePosterImage: UIImage
-    let averageRating: Double
+struct Movie: Codable {
+    
+    let original_title: String?
+    let overview: String?
+    let poster_path: String?
+    let vote_average: Double?
 }
 
-struct PopularMovies: Decodable {
-    let movies: [Movie]
+struct PopularMovies: Codable {
+    let results: [Movie]
 }

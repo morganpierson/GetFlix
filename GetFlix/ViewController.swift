@@ -15,16 +15,20 @@ class ViewController: UIViewController {
    
     let API_KEY = "f6840ab8b085a8f365cf977cf91c3296"
     
+    let client = MovieDBAPIClient()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        client.getPopularMovies() {[unowned self] movies, error in
+            
+            if let movieList = movies {
+                print(movieList)
+            } else {
+                print(error) 
+            }
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

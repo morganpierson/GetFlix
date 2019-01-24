@@ -44,7 +44,6 @@ class MovieDBAPIClient {
         
         //define session task responsible for asynchronously fetching data
         let task = session.dataTask(with: request) { data, response, error in
-            
             //dispatch successful data back to main thread once complete
             DispatchQueue.main.async {
                 //make sure data exists from request
@@ -54,18 +53,20 @@ class MovieDBAPIClient {
                         completion(nil, error)
                         return
                     }
-                    
+                    print("DATA: ", data)
                     if httpResponse.statusCode == 200 {
                         do {
                             //save successfully decoded movie data with type we want to use as model reference for data
                             let movie = try self.decoder.decode(PopularMovies.self, from: data)
-                            
+                            print("movie: ", movie)
                             //call completion handler with successful movie data
                             completion(movie, nil)
                         } catch {
+                            print("ERROR DECODING: ", error)
                             completion(nil, error)
                         }
                     } else {
+                        print("ERROR: ", httpResponse.statusCode)
                         completion(nil, error)
                     }
                 }
